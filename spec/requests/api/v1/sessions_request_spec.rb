@@ -17,7 +17,6 @@ RSpec.describe 'sessions request' do
     headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
     post '/api/v1/sessions', headers: headers, params: JSON.generate(session)
     user = JSON.parse(response.body, symbolize_names: true)
-    require "pry"; binding.pry
     expect(response).to be_successful
     expect(response.status).to eq(200)
     expect(user[:data]).to have_key(:type)

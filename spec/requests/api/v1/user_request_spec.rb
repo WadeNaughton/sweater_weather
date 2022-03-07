@@ -19,4 +19,16 @@ RSpec.describe 'users request' do
     expect(user[:data][:attributes]).to_not have_key(:password)
     expect(user[:data][:attributes]).to_not have_key(:password_confirmation)
   end
+
+  it "returns error when password confirmation and password do not match" do
+    data = {
+      "email": "wade@gmail.com",
+      "password": "password",
+      "password_confirmation": "pass"
+    }
+    headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    post '/api/v1/users', headers: headers, params: JSON.generate(data)
+    expect(response).to_not be_successful
+    expect(response.status).to eq(404)
+  end
 end

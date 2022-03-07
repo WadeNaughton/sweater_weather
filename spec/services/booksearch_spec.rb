@@ -5,5 +5,6 @@ RSpec.describe BooksearchService do
 
     search = BooksearchService.get_book('denver,co', 5)
     expect(search).to be_a Hash
+
   end
 end

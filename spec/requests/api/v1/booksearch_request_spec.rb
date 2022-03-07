@@ -9,6 +9,15 @@ RSpec.describe 'booksearch request' do
       expect(booksearch).to be_a Hash
       expect(booksearch[:data]).to have_key(:attributes)
       expect(booksearch[:data][:attributes]).to have_key(:books)
-      expect(booksearch[:data][:attributes][:books]).to have_key(:isbn)
+      expect(booksearch[:data][:attributes]).to have_key(:destination)
+      expect(booksearch[:data][:attributes]).to have_key(:total_books_found)
+
+      expect(booksearch[:data][:attributes]).to have_key(:forecast)
+      expect(booksearch[:data][:attributes][:forecast]).to have_key(:summary)
+      expect(booksearch[:data][:attributes][:forecast]).to have_key(:temperature)
+
+      expect(booksearch[:data][:attributes][:books][0]).to have_key(:isbn)
+      expect(booksearch[:data][:attributes][:books][0]).to have_key(:publisher)
+      expect(booksearch[:data][:attributes][:books][0]).to have_key(:title)
   end
 end

@@ -2,7 +2,7 @@ class Api::V1::BackgroundController < ApplicationController
   before_action :check_location
   def index
     background = BackgroundFacade.get_image(@location)
-    render json: BackgroundSerializer.background(background,@location)
+    render json: BackgroundSerializer.background_data(background,@location)
   end
 
   private

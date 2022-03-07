@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 06 Mar 2022 15:43:04 GMT
+      - Sun, 06 Mar 2022 15:38:57 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -29,15 +29,15 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - 6e7c3474be1a3338-EWR
+      - 6e7c2e6b0b21e6c4-EWR
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
       - __cf_bm=2F_2KGUm2N2L5Gmy_IoBPTUpt4YfH.4T5BUdRNP8HPo-1646581137-0-AVVFYnPKXNs9T1389Tex98o0rAlY4IHZsqBgCuLCRXzZ19IiijLY+g5Ib2DFBpZf1mWMFUTFEsNmBVldC0gXl8g=;
         path=/; expires=Sun, 06-Mar-22 16:08:57 GMT; domain=.pexels.com; HttpOnly;
         Secure; SameSite=None
-      - __cf_bm=v01BAnVMNi3LaVHoT.m19Af_kJ_mtXUuAAks7q_NLh0-1646581384-0-AXyAVqDWWpBYRIZFPxG2RGQSdToajfdK5kUGnj2EPjcnO3HgbUOti5xvUTnauQEMB5J54xkeecDmMvLyJZK7uws=;
-        path=/; expires=Sun, 06-Mar-22 16:13:04 GMT; domain=.pexels.com; HttpOnly;
+      - __cf_bm=OswJoMOEVkqS6zWB29m1_ejIsEDpiLTGt94SEQOupo4-1646581137-0-AT1bZXG/nwMZvcUtF6s4+25ux7ZFbsvSJewo7wl6Stx9ZaApbXjnxAeGiaHDBpDVXeM1e6+P406Z1Ojo20nmGCE=;
+        path=/; expires=Sun, 06-Mar-22 16:08:57 GMT; domain=.pexels.com; HttpOnly;
         Secure; SameSite=None
       - _mkra_stck=mysql%3A1646581142.3601935; path=/; max-age=10; expires=Sun, 06
         Mar 2022 15:39:07 GMT; HttpOnly
@@ -54,7 +54,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '20000'
       X-Ratelimit-Remaining:
-      - '19994'
+      - '19995'
       X-Ratelimit-Reset:
       - '1649100284'
       X-Request-Id:
@@ -63,8 +63,6 @@ http_interactions:
       - '0.159317'
       X-Server:
       - anteater
-      X-Tyk-Cached-Response:
-      - '1'
       Server:
       - cloudflare
     body:
@@ -100,5 +98,5 @@ http_interactions:
         Shot of Leading Lines Across the Denver Union Station"},{"id":9376507,"width":5986,"height":3991,"url":"https://www.pexels.com/photo/people-walking-on-park-near-high-rise-buildings-9376507/","photographer":"Arpan
         Parikh","photographer_url":"https://www.pexels.com/@arpan-parikh-78161269","photographer_id":78161269,"avg_color":"#AD9589","src":{"original":"https://images.pexels.com/photos/9376507/pexels-photo-9376507.jpeg","large2x":"https://images.pexels.com/photos/9376507/pexels-photo-9376507.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/9376507/pexels-photo-9376507.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/9376507/pexels-photo-9376507.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/9376507/pexels-photo-9376507.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/9376507/pexels-photo-9376507.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/9376507/pexels-photo-9376507.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/9376507/pexels-photo-9376507.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"People
         Walking on Park Near High Rise Buildings"}],"total_results":74,"next_page":"https://api.pexels.com/v1/search/?page=2\u0026per_page=15\u0026query=Denver"}'
-  recorded_at: Sun, 06 Mar 2022 15:43:04 GMT
+  recorded_at: Sun, 06 Mar 2022 15:38:57 GMT
 recorded_with: VCR 6.0.0

@@ -1,6 +1,6 @@
 class BackgroundSerializer
 
-  def self.background(background, location)
+  def self.background_data(background, location)
     { "data":
      {
        "id": nil,

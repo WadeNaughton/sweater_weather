@@ -8,7 +8,7 @@ class Api::V1::BooksearchController < ApplicationController
 end
 
 def check_location
-  if params[:location].present?
+  if params[:location] && params[:quantity].present?
     @coordinates = MapFacade.get_coordinates(params[:location])
 
   else

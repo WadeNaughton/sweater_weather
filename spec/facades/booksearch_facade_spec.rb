@@ -7,5 +7,8 @@ RSpec.describe BooksearchFacade do
     expect(searched_books[:docs][0]).to have_key(:title)
     expect(searched_books[:docs][0]).to have_key(:publisher)
     expect(searched_books[:docs][0]).to have_key(:isbn)
+
+    expect(searched_books[:docs][0]).to have_key(:isbn)
+
   end
 end

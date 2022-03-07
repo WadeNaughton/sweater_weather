@@ -15,9 +15,9 @@ class BooksSerializer
           "total_books_found": book[:numFound],
           "books": book[:docs].map do |b|
             {
-              "isbn" b[:isbn],
-              "title" b[:title],
-              "publisher" b[:publisher]
+              "isbn": b[:isbn],
+              "title": b[:title],
+              "publisher": b[:publisher]
             }
           end
         }

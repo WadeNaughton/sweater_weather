@@ -3,7 +3,7 @@ class Api::V1::BooksearchController < ApplicationController
   def index
     forecast = ForecastFacade.get_forecast(@coordinates[:lat], @coordinates[:lng])
     book = BooksearchFacade.get_book(params[:location], params[:quantity])
-    render json: BooksSerializer.books_data(book,forecast)
+    render json: BooksSerializer.book_data(book,forecast)
   end
 end
 

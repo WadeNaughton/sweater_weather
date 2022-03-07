@@ -7,5 +7,8 @@ RSpec.describe 'booksearch request' do
       expect(response).to be_successful
       expect(response.status).to eq(200)
       expect(booksearch).to be_a Hash
+      expect(booksearch[:data]).to have_key(:attributes)
+      expect(booksearch[:data][:attributes]).to have_key(:books)
+      expect(booksearch[:data][:attributes][:books]).to have_key(:isbn)
   end
 end

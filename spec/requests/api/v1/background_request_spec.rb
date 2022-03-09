@@ -1,6 +1,6 @@
 require 'rails_helper'
 RSpec.describe 'background request' do
-  it 'returns json' do
+  it 'returns json', :vcr do
       headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
       get '/api/v1/background', headers: headers, params: { location: "denver,co" }
       background = JSON.parse(response.body, symbolize_names: true)
@@ -18,5 +18,12 @@ RSpec.describe 'background request' do
       expect(background[:data][:attributes][:credit]).to have_key(:author)
 
 
+  end
+
+  it "returns 404 if location not present" do
+    headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    get '/api/v1/background', headers: headers
+    expect(response).to_not be_successful
+    expect(response.status).to eq(404)
   end
 end

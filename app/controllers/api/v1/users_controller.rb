@@ -5,9 +5,9 @@ class Api::V1::UsersController < ApplicationController
 
     if params[:password] == params[:password_confirmation]
       user = User.create(user_params)
-      render json: UserSerializer.user_data(user)
+      render json: UserSerializer.new(user), status: 201
     else
-      render status: 404
+      render json: { data: { message: 'Email or Password is incorrect.' } }, status: 404
     end
   end
 

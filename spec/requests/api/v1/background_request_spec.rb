@@ -19,4 +19,11 @@ RSpec.describe 'background request' do
 
 
   end
+
+  it "returns 404 if location not present" do
+    headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    get '/api/v1/background', headers: headers
+    expect(response).to_not be_successful
+    expect(response.status).to eq(404)
+  end
 end

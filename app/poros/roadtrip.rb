@@ -47,9 +47,9 @@ class Roadtrip
     total_hours = hours + round
     conditions = nil
     if round < 48
-      conditions = weather[:hourly][round][:weather][0][:description]
+      conditions = weather[:hourly][total_hours][:weather][0][:description]
     elsif round > 48
-      conditions = weather[:daily][round][:weather][0][:description]
+      conditions = weather[:daily][total_hours][:weather][0][:description]
     end
     conditions
   end

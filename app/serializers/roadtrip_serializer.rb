@@ -19,14 +19,14 @@ class RoadtripSerializer
 
   end
 
-  def self.errors(roadtrip)
+  def self.errors(origin,destination)
         {
       "data": {
         "id": nil,
         "type": "roadtrip",
         "attributes": {
-          "start_city": roadtrip.start_city,
-          "end_city": roadtrip.end_city,
+          "start_city": origin,
+          "end_city": destination,
           "travel_time": "impossible",
           "weather_at_eta": {
             "temperature": "",

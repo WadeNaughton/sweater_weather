@@ -1,6 +1,6 @@
 require 'rails_helper'
 RSpec.describe 'background request' do
-  it 'returns json' do
+  it 'returns json', :vcr do
       headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
       get '/api/v1/background', headers: headers, params: { location: "denver,co" }
       background = JSON.parse(response.body, symbolize_names: true)

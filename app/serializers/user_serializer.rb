@@ -1,16 +1,10 @@
 class UserSerializer
 
-  def self.user_data(user)
-        {
-      "data": {
-        "type": "users",
-        "id": user.id,
-        "attributes": {
-          "email": user.email,
-          "api_key": user.auth_token
-        }
-      }
-    }
-  end
+  include JSONAPI::Serializer
 
+  attributes :email
+
+  attribute :api_key do |user|
+    user.auth_token
+  end
 end

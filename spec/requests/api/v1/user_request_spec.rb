@@ -1,6 +1,6 @@
 require 'rails_helper'
 RSpec.describe 'users request' do
-  it 'returns json' do
+  it 'returns json', :vcr do
     data = {
       "email": "wade@gmail.com",
       "password": "password",
@@ -10,7 +10,7 @@ RSpec.describe 'users request' do
     post '/api/v1/users', headers: headers, params: JSON.generate(data)
     user = JSON.parse(response.body, symbolize_names: true)
     expect(response).to be_successful
-    expect(response.status).to eq(200)
+    expect(response.status).to eq(201)
     expect(user[:data]).to have_key(:type)
     expect(user[:data]).to have_key(:id)
     expect(user[:data]).to have_key(:attributes)
@@ -20,7 +20,7 @@ RSpec.describe 'users request' do
     expect(user[:data][:attributes]).to_not have_key(:password_confirmation)
   end
 
-  it "returns error when password confirmation and password do not match" do
+  it "returns error when password confirmation and password do not match", :vcr do
     data = {
       "email": "wade@gmail.com",
       "password": "password",

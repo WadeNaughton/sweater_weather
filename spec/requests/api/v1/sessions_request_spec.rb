@@ -1,6 +1,6 @@
 require 'rails_helper'
 RSpec.describe 'sessions request' do
-  it 'returns json' do
+  it 'returns json', :vcr do
   data = {
     "email": "wade@gmail.com",
     "password": "password",
@@ -28,7 +28,7 @@ RSpec.describe 'sessions request' do
     expect(user[:data][:attributes]).to_not have_key(:password_confirmation)
   end
 
-  it "returns error when email is wrong" do
+  it "returns error when email is wrong", :vcr do
     data = {
       "email": "wade@gmail.com",
       "password": "password",
@@ -49,7 +49,7 @@ RSpec.describe 'sessions request' do
       expect(response.status).to eq(404)
   end
 
-  it "returns error when password is wrong" do
+  it "returns error when password is wrong", :vcr do
     data = {
       "email": "wade@gmail.com",
       "password": "password",

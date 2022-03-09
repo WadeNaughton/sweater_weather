@@ -1,5 +1,5 @@
 require 'rails_helper'
-RSpec.describe 'forecast request' do
+RSpec.describe 'forecast request', :vcr do
   it 'returns json' do
 
     headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
@@ -65,7 +65,7 @@ RSpec.describe 'forecast request' do
     expect(forecast[:data][:attributes][:hourly_weather][0]).to_not have_key(:wind_gust)
   end
 
-  it "returns error when location is not provided" do
+  it "returns error when location is not provided", :vcr do
     headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
     get '/api/v1/forecast', headers: headers
 
